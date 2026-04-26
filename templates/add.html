@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background: #0f380f; 
+            color: #8bac0f; 
+            font-family: 'Press Start 2P', cursive; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-box { 
+            background: #9bbc0f; 
+            color: #0f380f; 
+            padding: 40px; 
+            border: 8px solid #306230; 
+            width: 500px;
+            box-shadow: 15px 15px 0px #306230;
+            position: relative;
+        }
+
+        h2 { 
+            text-align: center; 
+            background: #306230; 
+            color: #9bbc0f; 
+            margin: -40px -40px 30px -40px; 
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        label { display: block; margin-bottom: 10px; font-size: 12px; }
+
+        input, textarea { 
+            width: 100%; 
+            box-sizing: border-box;
+            margin-bottom: 25px; 
+            background: #8bac0f; 
+            border: 4px solid #306230; 
+            font-family: inherit; 
+            padding: 12px;
+            color: #0f380f;
+            outline: none;
+        }
+
+        input:focus {
+            background: #ffffff;
+        }
+
+        button { 
+            width: 100%;
+            background: #306230; 
+            color: white; 
+            padding: 20px; 
+            border: none; 
+            cursor: pointer; 
+            font-family: inherit; 
+            box-shadow: 0 6px 0 #000;
+            transition: 0.1s;
+        }
+
+        button:active {
+            box-shadow: 0 0px 0 #000;
+            transform: translateY(6px);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #306230;
+            font-size: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>[ REGISTER_NEW_QUEST ]</h2>
+        <form method="POST">
+            <label>NAME OF MISSION:</label>
+            <input name="title" required placeholder="e.g. SQL MASTER">
+            
+            <label>MISSION BRIEFING:</label>
+            <textarea name="desc" rows="3"></textarea>
+            
+            <label>BOUNTY (GOLDS):</label>
+            <input name="price" type="number" placeholder="0000">
+            
+            <label>PIXEL_ART_URL:</label>
+            <input name="image" placeholder="http://...">
+            
+            <button type="submit">SAVE TO MEMORY CARD</button>
+        </form>
+        <a href="/" class="back-link">< RETURN TO HUB</a>
+    </div>
+</body>
+</html>
